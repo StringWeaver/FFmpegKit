@@ -1039,7 +1039,15 @@ enum Utility {
     @discardableResult
     static func shell(_ command: String, isOutput: Bool = false, currentDirectoryURL: URL? = nil, environment: [String: String] = [:]) -> String? {
         do {
-            return try launch(executableURL: URL(fileURLWithPath: "/bin/zsh"), arguments: ["-c", command], isOutput: isOutput, currentDirectoryURL: currentDirectoryURL, environment: environment)
+            var env = ProcessInfo.processInfo.environment
+            for (key, value) in environment {
+                if key.uppercased() == "PATH", let sysPath = env["PATH"] {
+                    env["PATH"] = value + ":" + sysPath
+                } else {
+                    env[key] = value
+                }
+            }
+            return try launch(executableURL: URL(fileURLWithPath: "/bin/zsh"), arguments: ["-c", command], isOutput: isOutput, currentDirectoryURL: currentDirectoryURL, environment: env)
         } catch {
             print(error.localizedDescription)
             return nil
