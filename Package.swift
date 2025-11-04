@@ -78,7 +78,7 @@ let package = Package(
             name: "ffplay",
             dependencies: [
                 "fftools",
-                "SDL2",
+                "FFmpegSDL2",
             ]
         ),
         .executableTarget(
@@ -100,7 +100,7 @@ let package = Package(
             ]
         ),
         .systemLibrary(
-            name: "SDL2",
+            name: "FFmpegSDL2",
             pkgConfig: "sdl2",
             providers: [
                 .brew(["sdl2"]),
