@@ -20,7 +20,6 @@ let package = Package(
         .library(name: "Libswscale", targets: ["Libswscale"]),
         .library(name: "libass", targets: ["libfreetype", "libfribidi", "libharfbuzz", "libass"]),
         .library(name: "libmpv", targets: ["FFmpegKit", "libass", "libmpv"]),
-        .library(name: "gmp", targets: ["gmp"]),
         .executable(name: "ffmpeg", targets: ["ffmpeg"]),
         .executable(name: "ffplay", targets: ["ffplay"]),
         .executable(name: "ffprobe", targets: ["ffprobe"]),
