@@ -161,6 +161,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Libavformat",
+            dependencies: ["gmp"],
             path: "Sources/Libavformat.xcframework"
         ),
         .binaryTarget(
