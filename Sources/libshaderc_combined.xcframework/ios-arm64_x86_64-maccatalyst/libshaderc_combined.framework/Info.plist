@@ -5,13 +5,13 @@
 <key>CFBundleDevelopmentRegion</key>
 <string>en</string>
 <key>CFBundleExecutable</key>
-<string>libshaderc_combined</string>
+<string>libshaderccombined</string>
 <key>CFBundleIdentifier</key>
 <string>com.kintan.ksplayer.libshaderc-combined</string>
 <key>CFBundleInfoDictionaryVersion</key>
 <string>6.0</string>
 <key>CFBundleName</key>
-<string>libshaderc_combined</string>
+<string>libshaderccombined</string>
 <key>CFBundlePackageType</key>
 <string>FMWK</string>
 <key>CFBundleShortVersionString</key>
